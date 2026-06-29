@@ -9,9 +9,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="physarum-labs",
-    version="0.1.0",
+    version="0.2.0",
     author="Alvin Chang",
-    author_email="alvin@localhost",
     description="Differentiable Linear Programming via Physarum dynamics",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -21,7 +20,7 @@ setup(
         "Source": "https://github.com/Physarum-Lab/physarum-labs",
         "Paper": "https://arxiv.org/abs/2004.14539",
     },
-    packages=find_packages(exclude=["tests", "tests.*"]),
+    packages=find_packages(exclude=["tests", "tests.*", "examples"]),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Science/Research",
@@ -54,5 +53,4 @@ setup(
         ],
     },
     entry_points={},
-    python_requires=">=3.8",
 )
