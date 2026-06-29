@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physarum-labs"
+version = "0.1.0"
+description = "Differentiable Linear Programming via Physarum dynamics"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Alvin Chang", email = "alvin@localhost"},
+]
+keywords = [
+    "physarum",
+    "slime-mold",
+    "linear-programming",
+    "optimal-transport",
+    "differentiable",
+    "variational",
+    "bio-inspired",
+    "biological-computing",
+    "unconventional-computing",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "torch>=1.10",
+    "numpy>=1.18",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "scipy>=1.7",
+    "matplotlib>=3.4",
+]
+compare = [
+    "scipy>=1.7",
+    "matplotlib>=3.4",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Physarum-Lab/physarum-labs"
+"Bug Tracker" = "https://github.com/Physarum-Lab/physarum-labs/issues"
+"Source" = "https://github.com/Physarum-Lab/physarum-labs"
+"Paper (Meng 2021)" = "https://arxiv.org/abs/2004.14539"
+"Paper (Solé 2025)" = "https://arxiv.org/abs/2511.08531"
+
+[tool.setuptools]
+packages = ["physarum_ai"]
+
+[tool.setuptools.package-dir]
+"physarum_ai" = "."
