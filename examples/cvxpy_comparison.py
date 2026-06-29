@@ -23,16 +23,12 @@ Requires: scipy (for linprog), matplotlib (for plotting)
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
 
 import numpy as np
 import torch
 
-# Make the project importable
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from physarum_lp import PhysarumLPLayer  # noqa: E402
+from physarum_labs import PhysarumLPLayer
 
 # Check for optional dependencies
 try:

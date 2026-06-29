@@ -40,7 +40,7 @@ through each transport edge, and the dynamics find the least-action configuratio
 Usage
 -----
     >>> import torch
-    >>> from physarum_lp import PhysarumLPLayer
+    >>> from physarum_labs import PhysarumLPLayer
     >>>
     >>> # Cost matrix: smaller cost = stronger assignment
     >>> scores = torch.rand(4, 5)  # 4 queries, 5 keys

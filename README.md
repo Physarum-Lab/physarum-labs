@@ -17,14 +17,19 @@ differentiable solvers, unifying four lines of recent research:
 
 ## What's here
 
-- **`physarum_lp.py`** — Clean MIT-licensed PyTorch reimplementation of the
+- **`physarum_labs/lp.py`** — Clean MIT-licensed PyTorch reimplementation of the
   Physarum-inspired differentiable LP solver. Drop-in replacement for
   Sinkhorn-based optimal transport layers. **No Magic Leap license** — completely
   independent of the SuperGlue codebase.
 
-- **`variational_network_machine.py`** — Demo combining the LP solver with
-  Solé's Lagrangian framework. Shows how to add transport dissipation,
-  sparsity, and entropy regularization on top of the base solver.
+- **`physarum_labs/variational.py`** — End-to-end `VariationalNetworkMachine`
+  combining the LP solver with Solé's Lagrangian framework. Shows how to add
+  transport dissipation, sparsity, and entropy regularization on top of the
+  base solver, and how to learn edge affinities end-to-end.
+
+- **`examples/cvxpy_comparison.py`** — Validates the Physarum solver against
+  `scipy.optimize.linprog` on a range of problem sizes and iteration counts,
+  and produces a convergence plot at `assets/convergence.png`.
 
 ## Why this exists
 
@@ -36,7 +41,7 @@ does, cleanly.
 
 ## Quick start
 
-### Install via PyPI (after release)
+### Install via PyPI
 ```bash
 pip install physarum-labs
 ```
@@ -50,9 +55,9 @@ pip install -e ".[dev]"  # includes scipy and matplotlib for benchmarks
 
 ### Run the demos
 ```bash
-python physarum_lp.py  # self-test
-python variational_network_machine.py  # maze, matching, learning loop
-python cvxpy_comparison.py  # validates against scipy LP solver
+python -m physarum_labs.lp                # LP solver self-test
+python -m physarum_labs.variational       # maze, matching, learning loop
+python examples/cvxpy_comparison.py       # validates against scipy LP solver
 ```
 
 ### Run the tests
@@ -62,7 +67,7 @@ pytest tests/ -v
 
 ```python
 import torch
-from physarum_lp import PhysarumLPLayer
+from physarum_labs import PhysarumLPLayer
 
 # Cost matrix (lower = better match)
 scores = torch.rand(4, 5)

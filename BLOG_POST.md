@@ -198,7 +198,7 @@ pip install -e ".[dev]"
 
 ```python
 import torch
-from physarum_lp import PhysarumLPLayer
+from physarum_labs import PhysarumLPLayer
 
 # Cost matrix: lower cost = better match
 scores = torch.rand(4, 5)

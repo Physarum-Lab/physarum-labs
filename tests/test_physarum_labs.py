@@ -1,9 +1,9 @@
 """
-test_physarum_lp.py — Comprehensive tests for physarum_lp.py
-============================================================
+test_physarum_labs.py — Comprehensive tests for the physarum_labs package
+=========================================================================
 
-Run:  python -m pytest tests/test_physarum_lp.py -v
-       (or) python tests/test_physarum_lp.py
+Run:  python -m pytest tests/test_physarum_labs.py -v
+       (or) python tests/test_physarum_labs.py
 
 Tests:
 - Shape correctness
@@ -25,10 +25,10 @@ from pathlib import Path
 import torch
 import torch.nn.functional as F
 
-# Make the project importable
+# Make the project importable when running tests from a source checkout
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from physarum_lp import PhysarumLPLayer, VariationalPhysarumSolver  # noqa: E402
+from physarum_labs import PhysarumLPLayer, VariationalPhysarumSolver  # noqa: E402
 
 
 class TestShapes(unittest.TestCase):

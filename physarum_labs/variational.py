@@ -31,7 +31,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from physarum_lp import PhysarumLPLayer, VariationalPhysarumSolver
+from physarum_labs.lp import PhysarumLPLayer, VariationalPhysarumSolver
 
 
 class VariationalNetworkMachine(nn.Module):
