@@ -73,7 +73,6 @@ the MIT License.
 ## Contact
 
 - GitHub: @alfie
-- Email: alvin@localhost
 - Telegram: @alvinchangtech
 
 ## Acknowledgments
@@ -85,3 +84,7 @@ This work builds on:
 - Pietak & Levin (iScience 2025) — substrate-agnostic framing
 - Adamatzky (Bristol) — unconventional computing canon
 - Tero, Kobayashi, Nakagaki — original Physarum network model
+
+## Privacy
+
+This repo previously exposed a local-config email (`alvin@localhost`) in this file. Scrubbed 2026-06-29 per privacy audit. Maintainer contact: open a GitHub issue or PR.
