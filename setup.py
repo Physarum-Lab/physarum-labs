@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="physarum-labs",
-    version="0.2.0",
+    version="0.2.1",
     author="Alvin Chang",
     description="Differentiable Linear Programming via Physarum dynamics",
     long_description=long_description,
